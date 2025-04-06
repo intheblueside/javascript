@@ -1,3 +1,4 @@
 # Simple javascript apps
 
-1. Weather App
+a) Weather Check! App
+b) To-Do List! App
