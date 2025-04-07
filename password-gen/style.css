@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a3e27, #339991);
+    padding: 10px;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-class {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    margin: 100px auto 20px;
+    padding-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.password-class h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: #000;
+    
+}
+
+input {
+    padding: 20px;
+    user-select: none;
+    height: 50px;
+    width: 450px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: 18px;
+    border: 2px solid #339991;
+}
+
+input::placeholder {
+    font-size: 20px;
+}
+
+#button {
+    font-size: 15px;
+    margin-top: 40px;
+    width: 155px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+    border: 2px solid #1a3e27;
+    background-color: #1a3e27;
+    color: #fff;
+}
+
+.btn2 {
+    margin-left: 85px;
+}
+
+#button:hover {
+    color: white;
+    background-color: black;
+}
