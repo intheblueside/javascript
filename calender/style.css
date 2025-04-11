@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #c0e7ff;
 }
 
 .calender {
@@ -19,6 +20,7 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
+    background: #fff5d2;
 }
 
 .left, .right {
@@ -32,7 +34,7 @@
 
 .right {
     width: 42%;
-    background: #9ab920 ;
+    background: #ff9d35 ;
     color: #fff;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
