@@ -6,12 +6,13 @@ body {
 .stopwatch {
     width: 90%;
     max-width: 600px;
-    background: #412338;
+    background: #55bed6;
     text-align: center;
     padding: 40px 0;
     color: white;
     margin: 200px auto 0;
     box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    border-radius: 20px;
 }
 
 .stopwatch h1 {
@@ -25,14 +26,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 80px;
 }
 
 .buttons img {
     width: 50px;
     margin: 0 20px;
     cursor: pointer;
-}
-
-.buttons img:nth-child(2) {
-    width: 80px;
 }
