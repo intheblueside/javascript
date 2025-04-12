@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stopwatch">
+        <h1 id="displayTime">00:00:00</h1>
+        <div class="buttons">
+            <img src="img/stop.png" onclick="watchStop()">
+            <img src="img/play.png" onclick="watchStart()">
+            <img src="img/reset.png" onclick="watchReset()">
+
+        </div>
+    </div>
+
+    <script>
+
+        let [seconds, minutes, hour] = [0,0,0];
+        let displayTime = document.getElementById("displayTime");
+        let timer = null;
+
+        // stop function
+        // 60 seconds => 0 & update minute +1 and same for min n hour
+        function stopwatch() {
+            seconds++;
+
+            if (seconds==60) {
+                seconds = 0;
+                minutes++;
+
+                if (minutes ==60) {
+                    minutes =0;
+                    hour++;
+                }
+
+            }
+
+            let h = hour < 10 ? "0" + hour : hour;
+            let m = minutes < 10 ? "0" + minutes : minutes;
+            let s = seconds < 10 ? "0" + seconds : seconds;
+
+
+            displayTime.innerHTML = h + ":" + m + ":"+ s
+        }
+
+        // start the time and run each second
+        function watchStart() {
+            if (timer!= null) {
+                clearInterval(timer);
+            }
+            timer = setInterval(stopwatch, 1000);
+        }
+
+        // stop timer
+        function watchStop() {
+            clearInterval(timer);
+        }
+
+        // stop timer
+        function watchReset() {
+            clearInterval(timer);
+            [seconds, minutes, hour] = [0,0,0];
+            displayTime.innerHTML = "00:00:00";
+        }
+
+    </script>
+    
+</body>
+</html>
