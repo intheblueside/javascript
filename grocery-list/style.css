@@ -1,0 +1,17 @@
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+}
+.alert-success {
+    color: #155724;
+    background: #d4edda;
+}
+
+.grocery-container {
+    margin-top: 2rem;
+    transition: var(--transition);
+    visibility: hidden;
+}
+.show-container {
+    visibility: visible;
+}
