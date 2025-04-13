@@ -201,7 +201,7 @@ function createListItem(id, value) {
                             <div class="btn-container">
                             <button type="button" class="edit-btn"><i class="fas fa-edit"></i></button>
                             <button type="button" class="delete-btn"><i class="fas fa-trash"></i></button>
-                            </div>'`;
+                            </div>`;
 
         const deleteBtn = element.querySelector('.delete-btn');
         const editBtn = element.querySelector('.edit-btn');
