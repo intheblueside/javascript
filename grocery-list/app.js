@@ -43,7 +43,13 @@ function addItem(e) {
                             <button type="button" class="delete-btn"><i class="fas fa-trash"></i></button>
                             </div>'`;
 
-                            // append child
+        const deleteBtn = element.querySelector('.delete-btn');
+        const editBtn = element.querySelector('.edit-btn');
+
+        deleteBtn.addEventListener('click',deleteItem);
+        editBtn.addEventListener('click',editItem);
+        
+        // append child
         list.appendChild(element);
 
         displayAlert('item added', 'success');
@@ -57,7 +63,10 @@ function addItem(e) {
         setBackToDefault();
 
     } else if (value != '' && editFlag === true) {  
-        console.log('edit');
+        editElement.innerHTML = value;
+        displayAlert('value updated', 'success');
+        editLocalStorage(editID, value);
+        setBackToDefault();
 
     } else { // submit with no value
         displayAlert('please enter value','danger');
@@ -92,6 +101,41 @@ function clearItems(){
     localStorage.removeItem('list');
 }
 
+// delete function
+function deleteItem(e) {
+    const element = e.currentTarget.parentElement.parentElement; // grocery-items
+    const id = element.dataset.id;
+    
+    list.removeChild(element);
+
+    if (list.children.length === 0) {
+        container.classList.remove('show-container');
+    }
+
+    displayAlert('item removed', 'danger');
+    setBackToDefault();
+
+    // remove from local storage
+    removeFromLocalStorage(id);
+}
+
+function editItem(e) {
+    const element = e.currentTarget.parentElement.parentElement; // grocery-items container
+
+    // set edit item
+    editElement = e.currentTarget.parentElement.previousElementSibling; // title tag
+
+    // set form value
+    grocery.value = editElement.innerHTML;
+    editFlag = true;
+    editID = element.dataset.id;
+
+    // change submit value to new one
+    submitBtn.textContent = "Edit";
+}
+
+// edit function
+
 // make the placeholder to be default 
 function setBackToDefault() {
     console.log('back to default');
@@ -104,4 +148,9 @@ function setBackToDefault() {
 // save items to local browser 
 function addToLocalStorage(id,value) {
     console.log('add to local storage');
+}
+
+// remove from local storage
+function removeFromLocalStorage(id) {
+
 }
