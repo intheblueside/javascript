@@ -20,24 +20,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    backdrop-filter: blue(40px);
 }
 
 .clock {
     width: 100%;
     height: 100%;
-    background: rgba(235, 0, 255, 0.11);
+    background:  rgba(106, 81, 133, 0.7);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(40px);
 }
 
 .container::before {
     content: '';
     width: 180px;
     height: 180px;
-    background: #fa4175;
+    background: #4b52d6;
     border-radius: 5px;
     position: absolute;
     left: -50px;
@@ -49,7 +49,7 @@
     content: '';
     width: 180px;
     height: 180px;
-    background: #4fa6e9;
+    background: #383d9e;
     border-radius: 50%;
     position: absolute;
     right: -30px;
