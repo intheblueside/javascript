@@ -14,4 +14,6 @@
 
 7) Simple Stopwatch
 
-8) Grocery List (CRUD Functions with LocalStorage) 
+8) Grocery List (CRUD Functions with LocalStorage)
+
+9) Digital Clock (using simple function)
