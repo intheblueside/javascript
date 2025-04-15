@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Temperature Converter</h1>
+
+        <div class="temp-container">
+            <label for="celsius">Celsius: </label>
+            <input type="number" id="celsius" placeholder="Enter temperature" onchange="temperatureConvertC(this.value)" oninput="temperatureConvertC(this.value)">
+        </div>
+        <div class="temp-container">
+            <label for="fahrenheit">Fahrenheit: </label>
+            <input type="number" id="fahrenheit" placeholder="Enter temperature" onchange="temperatureConvertF(this.value)" oninput="temperatureConvertF(this.value)">
+        </div>
+        <div class="temp-container">
+            <label for="kelvin">Kelvin: </label>
+            <input type="number" id="kelvin" placeholder="Enter temperature" onchange="temperatureConvertK(this.value)" oninput="temperatureConvertK(this.value)">
+        </div>
+    </div>
+    <script>
+
+        let celsius = document.getElementById("celsius");
+        let fahrenheit = document.getElementById("fahrenheit");
+        let kelvin = document.getElementById("kelvin");
+
+        // calculate change by celsius input
+        function temperatureConvertC(valNum) {
+            valNum = parseFloat(valNum);
+            fahrenheit.value = (valNum*1.8) +32;
+            kelvin.value = valNum + 273.15;
+        }
+
+        // calculate change by kelvin input
+        function temperatureConvertK(valNum) {
+            valNum = parseFloat(valNum);
+            celsius.value = valNum - 273.15;
+            fahrenheit.value = (valNum - 273.15) * 1.8 + 32;
+        }
+
+        // calculate change by fahrenheit input
+        function temperatureConvertF(valNum) {
+            valNum = parseFloat(valNum);
+            celsius.value = (valNum-32) /1.8;
+            kelvin.value = (valNum - 32) / 1.8 + 273.15;
+        }
+
+    </script>
+</body>
+</html>
