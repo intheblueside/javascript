@@ -17,3 +17,5 @@
 8) Grocery List (CRUD Functions with LocalStorage)
 
 9) Digital Clock (using simple function)
+
+10) Temperature Converter (Celsius, Fahrenheit, Kelvin)
